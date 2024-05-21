@@ -1,0 +1,79 @@
+/* Common Breakpoints */
+
+/* xs 480px */
+/* sm 640px */
+/* md 768px */
+/* lg 1024px */
+/* xl 1280px */
+/* 2xl 1536px */
+
+/* @media (min-width: size) {} */
+
+:root {
+  /* colors */
+  --clr-gray: #393e46;
+  --clr-white: #eeeeee;
+  --clr-accent-1: #76ead7;
+  --clr-accent-2: #c4fb6d;
+
+  /* font sizes */
+
+  /* padding */
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  line-height: calc(1em + 0.5rem);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  color: var(--clr-white);
+  overscroll-behavior: none;
+}
+
+body > div {
+  flex: 1;
+  overflow-y: auto;
+}
+
+html,
+body {
+  background-color: var(--clr-gray);
+}
+
+h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+h2,
+h3,
+strong {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  user-select: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--clr-white);
+}
