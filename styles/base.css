@@ -11,19 +11,24 @@
 
 :root {
   /* colors */
-  --clr-gray: #393e46;
+  --clr-black: #020617;
+  --clr-gray: #2b2e34;
   --clr-white: #eeeeee;
   --clr-accent-1: #76ead7;
+  --clr-accent-1-dark: #2adec1;
   --clr-accent-2: #c4fb6d;
 
-  /* font sizes */
+  --clr-slate-500: #64748b;
 
-  /* padding */
+  /* responsive sizes */
+  --clamp-1-to-2: clamp(1rem, 0.737rem + 1.316vw, 2rem);
+  --clamp-2-to-3: clamp(2rem, 1.737rem + 1.316vw, 3rem);
 }
 
 * {
   padding: 0;
   margin: 0;
+  font: inherit;
   line-height: calc(1em + 0.5rem);
 }
 
@@ -41,7 +46,7 @@ body {
   overscroll-behavior: none;
 }
 
-body > div {
+#content {
   flex: 1;
   overflow-y: auto;
 }
@@ -56,11 +61,15 @@ h1 {
   font-weight: 600;
 }
 
-h2,
-h3,
-strong {
+h2 {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
+}
+
+strong,
+h3,
+h4 {
+  font-weight: 400;
 }
 
 img,
@@ -71,6 +80,10 @@ svg {
   display: block;
   max-width: 100%;
   user-select: none;
+}
+
+ul {
+  list-style: none;
 }
 
 a {

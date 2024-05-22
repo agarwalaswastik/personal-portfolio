@@ -1,0 +1,20 @@
+.section {
+  padding: calc(var(--clamp-1-to-2) * 1.5) 1rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 96rem;
+  margin: 0 auto;
+}
+
+.section-heading {
+  font-size: calc(var(--clamp-1-to-2) * 1.5);
+  text-align: center;
+  color: var(--clr-accent-1);
+}
+
+.section-subheading {
+  font-size: calc(var(--clamp-1-to-2) + 0.25rem);
+  color: var(--clr-accent-2);
+}
