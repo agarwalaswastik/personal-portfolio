@@ -180,7 +180,13 @@
             <h2 class="section-heading">Contact Me</h2>
             <div class="contact__content">
               <div class="contact__links"></div>
-              <form class="contact__form">
+              <form id="contact__form" action="https://api.web3forms.com/submit" method="POST">
+                <!-- Web3Forms Options -->
+                <input type="hidden" name="access_key" value="ba88ec84-542b-4a7a-8675-098f3f4ab2a5" />
+                <input type="hidden" name="subject" value="message from portfolio website" />
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none" />
+
+                <!-- Form Fields -->
                 <div class="contact__field-container">
                   <label for="contact__name">Your Name:</label>
                   <input
@@ -227,6 +233,9 @@
       <!-- <footer></footer> -->
     </div>
 
+    <script>
+      window.onload = () => document.getElementById("contact__form").reset();
+    </script>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
