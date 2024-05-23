@@ -12,11 +12,13 @@
 :root {
   /* colors */
   --clr-black: #020617;
+  --clr-dark-gray: #22252a;
   --clr-gray: #2b2e34;
   --clr-white: #eeeeee;
   --clr-accent-1: #76ead7;
   --clr-accent-1-dark: #2adec1;
   --clr-accent-2: #c4fb6d;
+  --clr-accent-2-dark: #99f507;
   --clr-accent-3: #7dd3fc;
 
   --clr-slate-500: #64748b;
@@ -25,6 +27,7 @@
   --clamp-1-to-2: clamp(1rem, 0.737rem + 1.316vw, 2rem);
   --clamp-2-to-3: clamp(2rem, 1.737rem + 1.316vw, 3rem);
   --clamp-7-to-9: clamp(7rem, 6.474rem + 2.632vw, 9rem);
+  --clamp-5-to-12: clamp(5rem, 3.158rem + 9.211vw, 12rem);
 }
 
 * {
@@ -86,6 +89,14 @@ svg {
 
 ul {
   list-style: none;
+}
+
+button {
+  display: inline-block;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
 }
 
 a {

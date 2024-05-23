@@ -31,8 +31,8 @@
         <section id="skills" class="section">
           <div class="container">
             <h2 class="section-heading">Skills</h2>
-            <div id="skills__content">
-              <!-- Content Start -->
+            <div class="skills__content">
+              <!-- Skills Content Start -->
 
               <!-- Overlay -->
               <div class="skills__overlay">
@@ -165,7 +165,7 @@
               <!-- Empty Div -->
               <div></div>
 
-              <!-- Content End -->
+              <!-- Skills Content End -->
             </div>
           </div>
         </section>
@@ -175,6 +175,52 @@
         <!-- Blog End -->
 
         <!-- Contact Start -->
+        <section id="contact" class="section">
+          <div class="container">
+            <h2 class="section-heading">Contact Me</h2>
+            <div class="contact__content">
+              <div class="contact__links"></div>
+              <form class="contact__form">
+                <div class="contact__field-container">
+                  <label for="contact__name">Your Name:</label>
+                  <input
+                    id="contact__name"
+                    class="contact__field"
+                    name="name"
+                    type="text"
+                    placeholder="John Doe"
+                    autocomplete="name"
+                    required
+                  />
+                </div>
+                <div class="contact__field-container">
+                  <label for="contact__email">Your Email:</label>
+                  <input
+                    id="contact__email"
+                    class="contact__field"
+                    name="email"
+                    type="text"
+                    placeholder="you@example.com"
+                    autocomplete="email"
+                    required
+                  />
+                </div>
+                <div class="contact__field-container">
+                  <label for="contact__message">Your Message:</label>
+                  <textarea
+                    id="contact__message"
+                    class="contact__field"
+                    name="message"
+                    placeholder="Hey there..."
+                    autocomplete="off"
+                    required
+                  ></textarea>
+                </div>
+                <button id="contact__submit" type="submit">Send</button>
+              </form>
+            </div>
+          </div>
+        </section>
         <!-- Contact End -->
       </main>
 

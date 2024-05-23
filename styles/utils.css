@@ -6,6 +6,11 @@
   width: 100%;
   max-width: 96rem;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--clamp-1-to-2);
+  overflow: hidden;
 }
 
 .section-heading {
