@@ -9,8 +9,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--clamp-1-to-2);
-  overflow: hidden;
+  gap: calc(var(--clamp-1-to-2) * 2);
 }
 
 .section-heading {

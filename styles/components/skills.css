@@ -1,3 +1,7 @@
+#skills .container {
+  overflow: hidden;
+}
+
 .skills__content {
   width: 100%;
   max-width: 64rem;
@@ -19,7 +23,7 @@
 }
 
 .skills__overlay span::after {
-  content: '';
+  content: "";
   height: 400vw;
   position: absolute;
   top: 125%;
