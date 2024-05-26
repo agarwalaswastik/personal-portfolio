@@ -28,6 +28,7 @@
   --clamp-1-to-2: clamp(1rem, 0.737rem + 1.316vw, 2rem);
   --clamp-2-to-3: clamp(2rem, 1.737rem + 1.316vw, 3rem);
   --clamp-3-to-4: clamp(3rem, 2.737rem + 1.316vw, 4rem);
+  --clamp-2-to-5: clamp(2rem, 1.211rem + 3.947vw, 5rem);
   --clamp-4-to-5: clamp(4rem, 3.737rem + 1.316vw, 5rem);
   --clamp-7-to-9: clamp(7rem, 6.474rem + 2.632vw, 9rem);
   --clamp-5-to-12: clamp(5rem, 3.158rem + 9.211vw, 12rem);
@@ -45,18 +46,9 @@ html {
 }
 
 body {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
   font-family: "Nunito", sans-serif;
   font-optical-sizing: auto;
   color: var(--clr-white);
-  overscroll-behavior: none;
-}
-
-#content {
-  flex: 1;
-  overflow-y: auto;
 }
 
 html,
