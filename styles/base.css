@@ -47,6 +47,8 @@ body {
   font-family: "Nunito", sans-serif;
   font-optical-sizing: auto;
   color: var(--clr-white);
+  overflow-x: hidden;
+  overflow-y: auto;
   overscroll-behavior: none;
 }
 
