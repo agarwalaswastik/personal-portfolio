@@ -1,4 +1,8 @@
-#skills .container {
+.skills-section .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: calc(var(--clamp-1-to-2) * 1.5);
   overflow: hidden;
 }
 
@@ -19,7 +23,7 @@
   top: 50%;
   transform: translate(-50%, -50%);
   font-size: calc(var(--clamp-7-to-9) / 8);
-  color: var(--clr-accent-3);
+  color: var(--clr-sky);
 }
 
 .skills__overlay span::after {
@@ -28,11 +32,13 @@
   position: absolute;
   top: 125%;
   left: 50%;
-  border-left: 1px solid var(--clr-accent-3);
+  border-left: 1px solid var(--clr-sky);
 }
 
 .skills__type {
   z-index: 10;
+  font-size: calc(var(--clamp-1-to-2) + 0.25rem);
+  color: var(--clr-lime);
   background-color: var(--clr-gray);
 }
 
@@ -58,7 +64,7 @@
 .skill__bar {
   width: 0;
   height: 100%;
-  background-color: var(--clr-accent-1-dark);
+  background-color: var(--clr-dark-teal);
   transition: width 1s ease-in-out;
   border-radius: 1rem;
 }
