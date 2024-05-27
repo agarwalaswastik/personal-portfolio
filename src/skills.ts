@@ -1,4 +1,4 @@
-const setSkillLevels = () => {
+const setupSkills = () => {
   const overlayElements = document.querySelectorAll(".skills__overlay *");
   overlayElements.forEach((elem) => {
     if (elem instanceof HTMLElement) {
@@ -14,4 +14,4 @@ const setSkillLevels = () => {
   });
 };
 
-export default setSkillLevels;
+export default setupSkills;

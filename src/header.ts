@@ -7,7 +7,7 @@ function debounce<T extends Function>(callback: T, delay: number) {
   return <T>(<any>callable);
 }
 
-function listenProgressbarUpdate() {
+function setupHeader() {
   const progressBar = document.querySelector(".header__progress-bar")!;
   if (!(progressBar instanceof HTMLElement)) return;
 
@@ -23,4 +23,4 @@ function listenProgressbarUpdate() {
   window.addEventListener("load", debouncedScrollUpdate);
 }
 
-export default listenProgressbarUpdate;
+export default setupHeader;

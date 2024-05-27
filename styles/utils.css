@@ -10,5 +10,9 @@
 
 .section-heading {
   font-size: calc(var(--clamp-1-to-2) * 1.5);
-  color: var(--clr-accent-1);
+  color: var(--clr-teal);
+}
+
+.section-separator {
+  border-color: var(--clr-slate-500);
 }
