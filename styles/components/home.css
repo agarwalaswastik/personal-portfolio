@@ -1,13 +1,10 @@
-#home {
+.home-section {
+  height: 100vh;
+  padding-top: calc(var(--clamp-2-to-3) * 2) !important;
   font-size: calc(var(--clamp-2-to-3) / 2);
 }
 
-.landing-section {
-  height: 100vh;
-  padding-top: calc(var(--clamp-2-to-3) * 2) !important;
-}
-
-#home .container {
+.home-section .container {
   height: 100%;
   display: flex;
   justify-content: center;
