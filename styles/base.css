@@ -15,13 +15,10 @@
   --clr-dark-gray: #22252a;
   --clr-gray: #2b2e34;
   --clr-white: #eeeeee;
-  --clr-accent-1: #76ead7;
-  --clr-accent-1-dark: #2adec1;
-  --clr-accent-2: #c4fb6d; /* rgb(196, 251, 109) */
-  --clr-accent-2-dark: #99f507; /* rgb(153, 245, 7) */
-  --clr-accent-3: #7dd3fc;
-  --clr-accent-3-dark: #0eaef9; /* rgb(14, 174, 249) */
-
+  --clr-teal: #76ead7;
+  --clr-dark-teal: #2adec1;
+  --clr-sky: #7dd3fc;
+  --clr-dark-sky: #0eaef9; /* rgb(14, 174, 249) */
   --clr-slate-500: #64748b;
 
   /* responsive sizes */
@@ -42,6 +39,7 @@
 }
 
 html {
+  scroll-padding-top: calc(var(--clamp-1-to-2) * 3);
   scroll-behavior: smooth;
 }
 
@@ -49,6 +47,7 @@ body {
   font-family: "Nunito", sans-serif;
   font-optical-sizing: auto;
   color: var(--clr-white);
+  overscroll-behavior: none;
 }
 
 html,
