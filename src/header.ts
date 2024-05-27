@@ -11,16 +11,16 @@ function listenProgressbarUpdate() {
   const progressBar = document.querySelector(".header__progress-bar")!;
   if (!(progressBar instanceof HTMLElement)) return;
 
-  window.addEventListener(
-    "scroll",
-    debounce(() => {
-      const scrollY = window.scrollY;
-      const innerHeight = window.innerHeight;
-      const fullHeight = document.body.scrollHeight;
+  const debouncedScrollUpdate = debounce(() => {
+    const scrollY = window.scrollY;
+    const innerHeight = window.innerHeight;
+    const fullHeight = document.body.scrollHeight;
 
-      progressBar.style.width = `${(scrollY / (fullHeight - innerHeight)) * 100}%`;
-    }, 1)
-  );
+    progressBar.style.width = `${(scrollY / (fullHeight - innerHeight)) * 100}%`;
+  }, 1);
+
+  window.addEventListener("scroll", debouncedScrollUpdate);
+  window.addEventListener("load", debouncedScrollUpdate);
 }
 
 export default listenProgressbarUpdate;
