@@ -11,7 +11,7 @@ import "/styles/utils.css";
 
 import setupHeader from "./header";
 import setupMobileNav from "./mobile-nav";
-import setupHome from "./home";
+import setupHome from "./home/home";
 import setupSkills from "./skills";
 
 setupHeader();

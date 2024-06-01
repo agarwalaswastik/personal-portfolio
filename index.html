@@ -15,18 +15,18 @@
   <body>
     <!-- TODO: Hero Section Animation -->
     <!-- TODO: Write Project Descriptions -->
-    <!-- TODO: Add Skill Percs -->
+    <!-- TODO: Add Skill Percs and fix skills.ts -->
     <!-- TODO: Update Resume -->
     <!-- TODO: Check contact form and link attributes -->
-    <!-- TODO: Replace blog with a link -->
     <!-- TODO: Footer -->
-
     <!-- TODO: Vendor Prefixes -->
     <!-- TODO: Meta Tags -->
     <!-- TODO: Accessibility -->
     <!-- TODO: Proper Image and Link attributes -->
     <!-- TODO: Make Repo Public, Write README.md, and deploy on a domain -->
     <!-- TODO: Scrollbar styles -->
+    <!-- TODO: Test for different screen sizes and browsers -->
+    <!-- TODO: Add links to about section -->
 
     <!-- Header Start -->
     <header class="header">
@@ -78,16 +78,22 @@
     <main>
       <!-- Hero/Home Start -->
       <section class="home-section section">
+        <div class="home__animation-container"></div>
         <div class="container">
-          <h1 class="home__heading">
-            <span class="home__hello">Hello</span>
-            <br />I am
-            <span class="home__fallback">Swastik</span>
-          </h1>
-          <p class="home__desc">
-            A passionate student who thrives in the world of coding, building and problem-solving.
-          </p>
-          <a href="#contact" class="home__cta">Reach Out</a>
+          <div class="home__fallback">
+            <h1 class="home__heading">
+              <span class="home__hello">Hello</span>
+              <br />I am
+              <span class="home__name">Swastik</span>
+            </h1>
+          </div>
+          <div class="home__info-container">
+            <p class="home__desc">A rising junior who thrives in the world of coding, building and problem-solving.</p>
+            <a class="home__cta" href="#contact">Reach Out</a>
+            <div class="home__links">
+              
+            </div>
+          </div>
         </div>
       </section>
       <!-- Hero/Home End -->
@@ -141,7 +147,7 @@
               <article class="project">
                 <img
                   loading="lazy"
-                  src="/portfolio.png"
+                  src="/projects/portfolio.png"
                   alt="Screenshot of Swastik's Portfolio Website"
                   class="project__image"
                 />
@@ -444,12 +450,18 @@
                 </svg>
               </a>
 
-              <!-- Blog -->
-              <a href="#blog" title="Blog" class="contact__link" style="left: 91%; top: 2.17%">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <!-- YouTube -->
+              <a
+                href="https://www.youtube.com/channel/UCYCDB9Y-6v2RoUDGkvI_oHA"
+                title="YouTube"
+                target="_blank"
+                class="contact__link"
+                style="left: 89.44%; top: 2.17%; background-color: var(--clr-gray)"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
                   <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
                   <path
-                    d="M192 32c0 17.7 14.3 32 32 32c123.7 0 224 100.3 224 224c0 17.7 14.3 32 32 32s32-14.3 32-32C512 128.9 383.1 0 224 0c-17.7 0-32 14.3-32 32zm0 96c0 17.7 14.3 32 32 32c70.7 0 128 57.3 128 128c0 17.7 14.3 32 32 32s32-14.3 32-32c0-106-86-192-192-192c-17.7 0-32 14.3-32 32zM96 144c0-26.5-21.5-48-48-48S0 117.5 0 144V368c0 79.5 64.5 144 144 144s144-64.5 144-144s-64.5-144-144-144H128v96h16c26.5 0 48 21.5 48 48s-21.5 48-48 48s-48-21.5-48-48V144z"
+                    d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z"
                   />
                 </svg>
               </a>
@@ -512,7 +524,7 @@
     <!-- <footer></footer> -->
 
     <script>
-      window.onload = () => document.getElementById("contact__form").reset();
+      window.onload = () => document.querySelector(".contact__form").reset();
     </script>
     <script type="module" src="/src/main.ts"></script>
   </body>

@@ -1,12 +1,8 @@
 const setupMobileNav = () => {
-  const barsButton = document.querySelector(".header__bars")!;
-  const mobileNav = document.querySelector(".mobile-nav")!;
-  const exitButton = document.querySelector(".mobile-nav__exit")!;
+  const barsButton = document.querySelector(".header__bars")! as HTMLElement;
+  const mobileNav = document.querySelector(".mobile-nav")! as HTMLElement;
+  const exitButton = document.querySelector(".mobile-nav__exit")! as HTMLElement;
   const mobileNavLinks = document.querySelectorAll(".mobile-nav__menu a");
-
-  if (!(barsButton instanceof HTMLButtonElement)) return;
-  if (!(mobileNav instanceof HTMLElement)) return;
-  if (!(exitButton instanceof HTMLButtonElement)) return;
 
   const showMobileNav = () => {
     mobileNav.style.display = "flex";
@@ -22,8 +18,8 @@ const setupMobileNav = () => {
   exitButton.onclick = hideMobileNav;
 
   mobileNavLinks.forEach((elem) => {
-    if (!(elem instanceof HTMLAnchorElement)) return;
-    elem.onclick = hideMobileNav;
+    const htmlELem = elem as HTMLElement;
+    htmlELem.onclick = hideMobileNav;
   });
 };
 

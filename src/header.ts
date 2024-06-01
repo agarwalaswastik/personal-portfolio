@@ -8,13 +8,16 @@ function debounce<T extends Function>(callback: T, delay: number) {
 }
 
 function setupHeader() {
-  const progressBar = document.querySelector(".header__progress-bar")!;
-  if (!(progressBar instanceof HTMLElement)) return;
+  const header = document.querySelector(".header")! as HTMLElement;
+  const progressBar = document.querySelector(".header__progress-bar")! as HTMLElement;
 
   const debouncedScrollUpdate = debounce(() => {
     const scrollY = window.scrollY;
     const innerHeight = window.innerHeight;
     const fullHeight = document.body.scrollHeight;
+
+    if (scrollY <= 10) header.style.transform = "translateY(-100%)";
+    else header.style.transform = "translateY(0)";
 
     progressBar.style.width = `${(scrollY / (fullHeight - innerHeight)) * 100}%`;
   }, 1);
