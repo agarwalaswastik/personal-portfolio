@@ -49,15 +49,22 @@ function setupScene(font: Font) {
 
   modelsStates.forEach(modelState => scene.add(modelState.letterModel));
 
+  const group = new THREE.Group();
+
   const hello = createModel(font, "Hello,", new THREE.MeshBasicMaterial({ color: helloColor }));
   const helloModel = hello[0];
   helloModel.position.set(-hello[1] / 2 - 0.25, letterHeight * 2, 0);
-  scene.add(helloModel);
+  group.add(helloModel);
 
   const iAm = createModel(font, "I am", new THREE.MeshBasicMaterial({ color: iAmColor }));
   const iAmModel = iAm[0];
   iAmModel.position.set(iAm[1] / 2 + 0.25, letterHeight * 2, 0);
-  scene.add(iAmModel);
+  group.add(iAmModel);
+
+  const groupBoundingBox = new THREE.Box3().setFromObject(group);
+  const groupWidth = groupBoundingBox.max.x - groupBoundingBox.min.x;
+  group.position.x = hello[1] - groupWidth / 2;
+  scene.add(group);
 
   function animate() {
     const delta = clock.getDelta();
