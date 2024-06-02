@@ -9,10 +9,9 @@ export const helloColor = "#76ead7";
 export const iAmColor = "#eeeeee";
 export const nameColor = "#7dd3fc";
 
-export const name = "Swastik";
 export const minNameInitPosY = -45;
 export const maxNameInitPosY = -30;
-export const nameFinPosY = 1.5;
+export const nameFinPosY = 0;
 export const landTime = 2.5;
 
 export const minXRotations = -3;

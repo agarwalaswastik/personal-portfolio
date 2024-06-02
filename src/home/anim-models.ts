@@ -2,13 +2,15 @@ import * as THREE from "three";
 import { Font } from "three/addons/loaders/FontLoader.js";
 import { TextGeometry } from "three/addons/geometries/TextGeometry.js";
 
-import { letterHeight, name, nameColor } from "./anim-constants";
+import { letterHeight, nameColor } from "./anim-constants";
 
 const material = new THREE.MeshBasicMaterial({ color: nameColor });
 
 export const models: THREE.Object3D[] = [];
+export const modelWidths: number[] = [];
+export const modelHeights: number[] = [];
 
-export function initModels(font: Font) {
+export function initModels(font: Font, name: string) {
   const len = name.length;
   for (let i = 0; i < len; i++) {
     const modelGeom = new TextGeometry(name[i], {
@@ -36,5 +38,7 @@ export function initModels(font: Font) {
     model.add(modelMesh);
 
     models.push(model);
+    modelWidths.push(modelGeom.boundingBox!.max.x - modelGeom.boundingBox!.min.x);
+    modelHeights.push(modelGeom.boundingBox!.max.y - modelGeom.boundingBox!.min.y);
   }
 }

@@ -4,7 +4,8 @@ import WebGL from "three/addons/capabilities/WebGL.js";
 import { Font, FontLoader } from "three/addons/loaders/FontLoader.js";
 
 import { fontPath, cameraPosZ } from "./anim-constants";
-import { initModels, models } from "./anim-models";
+import { initModels } from "./anim-models";
+import { createParameters, initStates } from "./anim-state";
 
 export default function setupHome() {
   const fallback = document.querySelector(".home__fallback")! as HTMLElement;
@@ -37,11 +38,13 @@ function setupScene(font: Font) {
     renderer.setSize(animContainer.offsetWidth, animContainer.offsetHeight);
   });
 
-  initModels(font);
+  const name = "Swastik";
 
-  const gridHelper = new THREE.GridHelper();
-  gridHelper.rotation.x = Math.PI / 2;
-  scene.add(gridHelper);
+  initModels(font, name);
+  const modelsParams = createParameters(name);
+  const modelsStates = initStates(modelsParams);
+
+  modelsStates.forEach(modelState => scene.add(modelState.letterModel));
 
   function animate() {
     renderer.render(scene, camera);
