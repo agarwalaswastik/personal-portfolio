@@ -1,0 +1,12 @@
+.footer {
+  padding: calc(var(--clamp-1-to-2) / 4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--clr-dark-gray);
+  font-size: calc(var(--clamp-4-to-5) / 4);
+}
+
+.footer__source {
+  color: var(--clr-sky);
+}
