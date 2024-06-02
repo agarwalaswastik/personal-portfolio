@@ -13,13 +13,13 @@ export function shuffleArrayOfPairs(array: Array<[number, number]>) {
   }
 }
 
-let idx: number = 0;
 const possibleInitPos: Array<[number, number]> = [];
 for (let i = minX; i <= maxX; i++) {
   for (let j = minZ; j <= maxZ; j++) {
     possibleInitPos.push([i, j]);
   }
 }
+let idx: number = possibleInitPos.length;
 
 export function randomInitPos() {
   if (idx === possibleInitPos.length) {

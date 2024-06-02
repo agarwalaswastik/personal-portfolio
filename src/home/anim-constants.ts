@@ -16,8 +16,8 @@ export const landTime = 2.5;
 
 export const minXRotations = -3;
 export const maxXRotations = 3;
-export const minYRotations = -8;
-export const maxYRotations = 8;
+export const minYRotations = -10;
+export const maxYRotations = 10;
 
 export const maxFlightAngVelY = 2.7 * 2 * Math.PI;
 

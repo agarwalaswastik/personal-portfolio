@@ -3,9 +3,10 @@ import WebGL from "three/addons/capabilities/WebGL.js";
 
 import { Font, FontLoader } from "three/addons/loaders/FontLoader.js";
 
-import { fontPath, cameraPosZ } from "./anim-constants";
-import { initModels } from "./anim-models";
+import { fontPath, cameraPosZ, helloColor, letterHeight, iAmColor } from "./anim-constants";
+import { createModel, initModels } from "./anim-models";
 import { createParameters, initStates } from "./anim-state";
+import { updateModelState } from "./anim-update";
 
 export default function setupHome() {
   const fallback = document.querySelector(".home__fallback")! as HTMLElement;
@@ -38,6 +39,8 @@ function setupScene(font: Font) {
     renderer.setSize(animContainer.offsetWidth, animContainer.offsetHeight);
   });
 
+  let elapsedTime: number = 0;
+  const clock = new THREE.Clock();
   const name = "Swastik";
 
   initModels(font, name);
@@ -46,7 +49,21 @@ function setupScene(font: Font) {
 
   modelsStates.forEach(modelState => scene.add(modelState.letterModel));
 
+  const hello = createModel(font, "Hello,", new THREE.MeshBasicMaterial({ color: helloColor }));
+  const helloModel = hello[0];
+  helloModel.position.set(-hello[1] / 2 - 0.25, letterHeight * 2, 0);
+  scene.add(helloModel);
+
+  const iAm = createModel(font, "I am", new THREE.MeshBasicMaterial({ color: iAmColor }));
+  const iAmModel = iAm[0];
+  iAmModel.position.set(iAm[1] / 2 + 0.25, letterHeight * 2, 0);
+  scene.add(iAmModel);
+
   function animate() {
+    const delta = clock.getDelta();
+    elapsedTime += delta;
+    modelsStates.forEach(modelState => updateModelState(modelState, elapsedTime));
+
     renderer.render(scene, camera);
   }
 }

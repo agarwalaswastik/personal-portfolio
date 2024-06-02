@@ -12,8 +12,8 @@
 }
 
 .home__animation-container {
-  width: 100vw;
-  height: 250vw;
+  width: min(100vw, 1536px);
+  height: min(250vw, calc(2 * 1536px));
   position: absolute;
   top: 50%;
   left: 50%;

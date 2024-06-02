@@ -47,13 +47,13 @@ export function createParameters(name: string) {
 export function initStates(modelsParams: ModelParameters[]) {
   let result: ModelState[] = [];
 
-  const modelNum = modelsParams.length;
+  const modelsNum = modelsParams.length;
   let wordWidth: number = 0;
-  for (let i = 0; i < modelNum; i++) wordWidth += modelWidths[i];
-  wordWidth += letterSpacing * (modelNum - 1);
+  for (let i = 0; i < modelsNum; i++) wordWidth += modelWidths[i];
+  wordWidth += letterSpacing * (modelsNum - 1);
 
   let widthCovered: number = 0;
-  for (let i = 0; i < modelNum; i++) {
+  for (let i = 0; i < modelsNum; i++) {
     widthCovered += modelWidths[i] / 2;
 
     const delta = (wordWidth / 2 - widthCovered) / cameraPosZ;
