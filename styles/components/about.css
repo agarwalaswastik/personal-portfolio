@@ -27,7 +27,7 @@
   font-size: calc(var(--clamp-4-to-5) / 4);
 }
 
-.about__desc strong {
+.about__desc a {
   color: var(--clr-sky);
 }
 
