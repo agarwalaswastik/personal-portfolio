@@ -1,5 +1,5 @@
 .footer {
-  padding: calc(var(--clamp-1-to-2) / 4);
+  padding: var(--clamp-1-to-2);
   display: flex;
   justify-content: center;
   align-items: center;
