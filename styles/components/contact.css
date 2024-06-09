@@ -144,11 +144,13 @@
 
   .contact__links-container {
     order: 2;
+    padding-top: 0;
   }
 
   .contact__form-container {
     max-width: 32rem;
     padding: calc(var(--clamp-2-to-3) / 2);
+    padding-top: 0;
   }
 
   .links-heading {
