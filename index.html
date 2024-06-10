@@ -3,7 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Swastik's Portfolio</title>
+    <title>Swastik Agarwala - Portfolio</title>
+
+    <meta name="description" content="Welcome to the portfolio website of Swastik Agarwala, a computer science student at Purdue University and an aspiring software developer. Explore my projects, skills, and professional journey in full-stack development, systems software, and more.">
+    <meta name="author" content="Swastik Agarwala">
+    <meta name="keywords" content="portfolio, software, full-stack development, systems, security, machine learning, design, projects, skills">
+
+    <!-- Open Graph Meta Tags for social media sharing -->
+    <meta property="og:title" content="Swastik Agarwala - Portfolio">
+    <meta property="og:description" content="Welcome to the portfolio website of Swastik Agarwala, a computer science student at Purdue University and an aspiring software developer. Explore my projects, skills, and professional journey in full-stack development, systems software, and more.">
+    
+    <!-- <meta property="og:image" content="https://example.com/path-to-your-image.jpg">
+    <meta property="og:url" content="https://your-portfolio-website.com"> -->
+    
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Swastik Agarwala - Portfolio">
+    <meta name="twitter:description" content="Welcome to the portfolio of Swastik Agarwala, showcasing my work as an aspiring Software Developer.">
+    <!-- <meta name="twitter:image" content="https://example.com/path-to-your-image.jpg"> -->
+
+    <!-- Canonical Link -->
+    <!-- <link rel="canonical" href="https://your-portfolio-website.com"> -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,26 +35,28 @@
     />
   </head>
   <body>
-    <!-- TODO: Check contact form and link attributes -->
     <!-- TODO: Meta Tags -->
     <!-- TODO: Accessibility -->
-    <!-- TODO: Proper Image and Link attributes -->
-    <!-- TODO: Make Repo Public, Write README.md, and deploy on a domain -->
-    <!-- TODO: Test for more different screen sizes and browsers -->
-    <!-- TODO: Add links to home section -->
+    <!-- TODO: Write README.md, and deploy on a domain -->
     <!-- TODO: Add Favicon -->
 
     <!-- Header Start -->
     <header class="header">
       <nav class="header__nav container">
-        <div class="header__logo-container"><a class="header__logo header__link" href="#">Swastik Agarwala</a></div>
+        <div class="header__logo-container">
+          <a class="header__logo header__link" href="#" title="Swastik Agarwala">Swastik Agarwala</a>
+        </div>
         <ul class="header__menu">
-          <li><a class="header__link" href="#about">About</a></li>
-          <li><a class="header__link" href="#projects">Projects</a></li>
-          <li><a class="header__link" href="#skills">Skills</a></li>
-          <li><a class="header__link" href="#contact">Contact</a></li>
+          <li><a class="header__link" href="#about" title="About">About</a></li>
+          <li><a class="header__link" href="#projects" title="Projects">Projects</a></li>
+          <li><a class="header__link" href="#skills" title="Skills">Skills</a></li>
+          <li><a class="header__link" href="#contact" title="Contact">Contact</a></li>
           <li class="header__seperator"></li>
-          <li><a class="header__resume" href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a></li>
+          <li>
+            <a class="header__resume" href="resume.pdf" title="My resume" target="_blank" rel="noopener noreferrer"
+              >Resume</a
+            >
+          </li>
         </ul>
 
         <!-- Burger Menu Button -->
@@ -60,11 +84,15 @@
         </svg>
       </button>
       <ul class="mobile-nav__menu">
-        <li><a class="mobile-nav__link" href="#about">About</a></li>
-        <li><a class="mobile-nav__link" href="#projects">Projects</a></li>
-        <li><a class="mobile-nav__link" href="#skills">Skills</a></li>
-        <li><a class="mobile-nav__link" href="#contact">Contact</a></li>
-        <li><a class="mobile-nav__resume" href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a></li>
+        <li><a class="mobile-nav__link" href="#about" title="About">About</a></li>
+        <li><a class="mobile-nav__link" href="#projects" title="Projects">Projects</a></li>
+        <li><a class="mobile-nav__link" href="#skills" title="Skills">Skills</a></li>
+        <li><a class="mobile-nav__link" href="#contact" title="Contact">Contact</a></li>
+        <li>
+          <a class="mobile-nav__resume" href="resume.pdf" title="My resume" target="_blank" rel="noopener noreferrer"
+            >Resume</a
+          >
+        </li>
       </ul>
     </div>
     <!-- Mobile Nav End -->
@@ -84,16 +112,17 @@
           <div class="home__info-container">
             <p class="home__desc">A rising junior who thrives in the world of coding, building and problem-solving.</p>
             <div class="home__cta-container">
-              <a class="home__cta" href="#contact">Reach Out</a>
-              <a class="home__cta" href="resume.pdf">Resume</a>
+              <a class="home__cta" href="#contact" title="Reach Out">Reach Out</a>
+              <a class="home__cta" href="resume.pdf" title="My resume">Resume</a>
             </div>
             <div class="home__links">
               <!-- GitHub -->
               <a
+                class="home__link"
                 href="https://github.com/agarwalaswastik"
                 title="GitHub"
                 target="_blank"
-                class="home__link"
+                rel="noopener noreferrer"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
                   <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
@@ -105,10 +134,11 @@
 
               <!-- LinkedIn -->
               <a
+                class="home__link"
                 href="https://www.linkedin.com/in/swastik-agarwala"
                 title="LinkedIn"
                 target="_blank"
-                class="home__link"
+                rel="noopener noreferrer"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                   <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
@@ -119,11 +149,7 @@
               </a>
 
               <!-- Email -->
-              <a
-                href="mailto:agarwalaswastik@gmail.com"
-                title="Email"
-                class="home__link"
-              >
+              <a class="home__link" href="mailto:agarwalaswastik@gmail.com" title="Email">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                   <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
                   <path
@@ -133,12 +159,7 @@
               </a>
 
               <!-- Codeforces -->
-              <a
-                href="https://codeforces.com/profile/Kaddoo"
-                title="Codeforces"
-                target="_blank"
-                class="home__link"
-              >
+              <a class="home__link" href="https://codeforces.com/profile/Kaddoo" title="Codeforces" target="_blank" rel="noopener noreferrer">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
                   <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
                   <path
@@ -149,10 +170,11 @@
 
               <!-- YouTube -->
               <a
+                class="home__link"
                 href="https://www.youtube.com/channel/UCYCDB9Y-6v2RoUDGkvI_oHA"
                 title="YouTube"
                 target="_blank"
-                class="home__link"
+                rel="noopener noreferrer"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
                   <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
@@ -174,7 +196,7 @@
         <div class="container">
           <h2 class="section-heading">About Me</h2>
           <div class="about__content">
-            <img src="/profile.jpeg" alt="Picture of Swastik Agarwala" class="about__image" />
+            <img loading="lazy" src="/profile.jpeg" alt="Picture of Swastik Agarwala" class="about__image" />
             <div class="about__desc-container">
               <p class="about__desc">
                 Hey there! I'm a junior majoring in
@@ -623,6 +645,7 @@
                 href="https://github.com/agarwalaswastik"
                 title="GitHub"
                 target="_blank"
+                rel="noopener noreferrer"
                 class="contact__link"
                 style="left: 1.11%; top: 79.35%; background-color: var(--clr-gray)"
               >
@@ -654,6 +677,7 @@
                 href="https://www.linkedin.com/in/swastik-agarwala"
                 title="LinkedIn"
                 target="_blank"
+                rel="noopener noreferrer"
                 class="contact__link"
                 style="left: 76.11%; top: 21.74%; background-color: var(--clr-gray)"
               >
@@ -695,6 +719,7 @@
                 href="https://codeforces.com/profile/Kaddoo"
                 title="Codeforces"
                 target="_blank"
+                rel="noopener noreferrer"
                 class="contact__link"
                 style="left: 98.89%; top: 34.78%"
               >
@@ -711,6 +736,7 @@
                 href="https://www.youtube.com/channel/UCYCDB9Y-6v2RoUDGkvI_oHA"
                 title="YouTube"
                 target="_blank"
+                rel="noopener noreferrer"
                 class="contact__link"
                 style="left: 89.44%; top: 2.17%; background-color: var(--clr-gray)"
               >
