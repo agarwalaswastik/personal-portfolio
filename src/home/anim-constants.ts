@@ -3,7 +3,7 @@ export const fontPath = "fonts/Poppins SemiBold_Regular.json";
 export const cameraPosZ = 25;
 export const accDueToGrav = -20.0;
 export const letterHeight = 1;
-export const letterSpacing = 0.2;
+export const letterSpacing = 0.12;
 
 export const helloColor = "#76ead7";
 export const iAmColor = "#eeeeee";

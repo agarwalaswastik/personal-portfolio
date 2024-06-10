@@ -19,10 +19,10 @@ export function initModels(font: Font, name: string) {
   }
 }
 
-export function createModel(font: Font, str: string, material: THREE.Material): [THREE.Object3D, number, number] {
+export function createModel(font: Font, str: string, material: THREE.Material, sizeCoeff: number = 1): [THREE.Object3D, number, number] {
   const modelGeom = new TextGeometry(str, {
     font,
-    size: letterHeight,
+    size: letterHeight * sizeCoeff,
     depth: 0.2,
     bevelThickness: 0.1,
     bevelSize: 0.01,

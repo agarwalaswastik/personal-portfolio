@@ -3,8 +3,8 @@ import WebGL from "three/addons/capabilities/WebGL.js";
 
 import { Font, FontLoader } from "three/addons/loaders/FontLoader.js";
 
-import { fontPath, cameraPosZ, helloColor, letterHeight, iAmColor } from "./anim-constants";
-import { createModel, initModels } from "./anim-models";
+import { fontPath, cameraPosZ, helloColor, letterHeight, iAmColor, letterSpacing } from "./anim-constants";
+import { createModel, initModels, modelWidths } from "./anim-models";
 import { createParameters, initStates } from "./anim-state";
 import { updateModelState } from "./anim-update";
 
@@ -47,24 +47,26 @@ function setupScene(font: Font) {
   const modelsParams = createParameters(name);
   const modelsStates = initStates(modelsParams);
 
-  modelsStates.forEach(modelState => scene.add(modelState.letterModel));
-
-  const group = new THREE.Group();
-
-  const hello = createModel(font, "Hello,", new THREE.MeshBasicMaterial({ color: helloColor }));
+  const hello = createModel(font, "Hello", new THREE.MeshBasicMaterial({ color: helloColor }), 1.8);
   const helloModel = hello[0];
-  helloModel.position.set(-hello[1] / 2 - 0.25, letterHeight * 2, 0);
-  group.add(helloModel);
+  helloModel.position.set(0, letterHeight * 2.3, 0);
+  scene.add(helloModel);
+
+  const secLineGroup = new THREE.Group();
 
   const iAm = createModel(font, "I am", new THREE.MeshBasicMaterial({ color: iAmColor }));
   const iAmModel = iAm[0];
-  iAmModel.position.set(iAm[1] / 2 + 0.25, letterHeight * 2, 0);
-  group.add(iAmModel);
+  iAmModel.position.set(-iAm[1] / 2 - 0.25, letterHeight / 2, 0);
+  secLineGroup.add(iAmModel);
 
-  const groupBoundingBox = new THREE.Box3().setFromObject(group);
-  const groupWidth = groupBoundingBox.max.x - groupBoundingBox.min.x;
-  group.position.x = hello[1] - groupWidth / 2;
-  scene.add(group);
+  const lettersGroup = new THREE.Group();
+  modelsStates.forEach(modelState => lettersGroup.add(modelState.letterModel));
+  const lettersGroupWidth = modelWidths.reduce((total, num) => total + num) + letterSpacing * (name.length - 1);
+  lettersGroup.position.set(lettersGroupWidth / 2 + 0.25, 0, 0);
+  secLineGroup.add(lettersGroup);
+
+  secLineGroup.position.x = -1;
+  scene.add(secLineGroup);
 
   function animate() {
     const delta = clock.getDelta();

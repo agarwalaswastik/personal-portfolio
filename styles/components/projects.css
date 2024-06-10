@@ -53,6 +53,10 @@
   font-size: calc(var(--clamp-4-to-5) / 4);
 }
 
+.project__desc strong {
+  color: var(--clr-dark-teal);
+}
+
 .project__tagslist {
   display: flex;
   flex-wrap: wrap;
