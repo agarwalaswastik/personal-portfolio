@@ -33,7 +33,7 @@
 
 .home__animation-loading {
   position: absolute;
-  top: 50%;
+  top: 47%;
   left: 50%;
   width: var(--clamp-2-to-5);
   height: var(--clamp-2-to-5);

@@ -73,8 +73,14 @@
 
 .project__image {
   width: 10rem;
+  aspect-ratio: 1;
   border: 1px solid var(--clr-slate-500);
   border-radius: 1rem;
+  font-size: 5rem;
+  user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (min-width: 640px) {
