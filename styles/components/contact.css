@@ -104,6 +104,11 @@
   background-color: var(--clr-gray);
   color: var(--clr-white);
   border-radius: 0.5rem;
+  transition: border-color 0.3s;
+}
+
+.contact__field:focus {
+  border-color: var(--clr-sky);
 }
 
 .contact__field:focus {

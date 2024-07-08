@@ -8,7 +8,7 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1.5fr 1fr;
-  gap: var(--clamp-1-to-2);
+  gap: 0;
 }
 
 .home__animation-container {
@@ -20,6 +20,28 @@
   transform: translate(-50%, -50%);
   z-index: 30;
   pointer-events: none;
+}
+
+@keyframes spin {
+  from {
+    transform: translate(-50%, -50%);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.home__animation-loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: var(--clamp-2-to-5);
+  height: var(--clamp-2-to-5);
+  border-radius: 50%;
+  border: 6px solid transparent;
+  border-top: 6px solid var(--clr-sky);
+  border-left: 6px solid var(--clr-sky);
+  animation: spin 1s infinite linear;
 }
 
 .home__fallback {

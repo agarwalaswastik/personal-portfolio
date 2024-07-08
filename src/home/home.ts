@@ -9,9 +9,11 @@ import { createParameters, initStates } from "./anim-state";
 import { updateModelState } from "./anim-update";
 
 export default function setupHome() {
+  const loading = document.querySelector(".home__animation-loading")! as HTMLElement;
   const fallback = document.querySelector(".home__fallback")! as HTMLElement;
 
   if (!WebGL.isWebGLAvailable()) {
+    loading.style.display = "none";
     fallback.style.display = "flex";
     return;
   }
@@ -67,6 +69,11 @@ function setupScene(font: Font) {
 
   secLineGroup.position.x = -1;
   scene.add(secLineGroup);
+
+  renderer.render(scene, camera);
+
+  const loading = document.querySelector(".home__animation-loading")! as HTMLElement;
+  loading.style.display = "none";
 
   function animate() {
     const delta = clock.getDelta();

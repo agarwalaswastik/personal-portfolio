@@ -35,6 +35,8 @@
     />
   </head>
   <body>
+    <!-- TODO: Noscript consideration -->
+    <!-- TODO: Projects -->
     <!-- TODO: Accessibility -->
     <!-- TODO: Write README.md -->
 
@@ -98,7 +100,9 @@
     <main>
       <!-- Hero/Home Start -->
       <section class="home-section section">
-        <div class="home__animation-container"></div>
+        <div class="home__animation-container">
+          <div class="home__animation-loading"></div>
+        </div>
         <div class="container">
           <div class="home__fallback">
             <h1 class="home__heading">
@@ -111,7 +115,7 @@
             <p class="home__desc">A rising junior who thrives in the world of coding, building and problem-solving.</p>
             <div class="home__cta-container">
               <a class="home__cta" href="#contact" title="Reach Out">Reach Out</a>
-              <a class="home__cta" href="resume.pdf" title="My resume">Resume</a>
+              <a class="home__cta" href="resume.pdf" title="My resume" target="_blank" rel="noopener noreferrer">Resume</a>
             </div>
             <div class="home__links">
               <!-- GitHub -->
@@ -237,7 +241,7 @@
                   title="Machine Learning at Purdue"
                   target="_blank"
                   rel="noopener noreferrer"
-                  >Machine Learning </a
+                  >Machine Learning</a
                 >. Through hands-on projects, I've not only honed my technical knowhow but also cultivated skills in
                 <a
                   href="https://www.linkedin.com/in/swastik-agarwala/"
@@ -340,7 +344,7 @@
             <li class="project-container">
               <article class="project">
                 <img loading="lazy" src="/projects/shell.png" alt="macOS terminal logo" class="project__image" />
-                <h3 class="project__heading">Unix Shell inspired from Bash</h3>
+                <h3 class="project__heading">Custom Unix Shell (Bash Strategy)</h3>
                 <p class="project__desc">
                   Developed a <strong>Unix</strong> shell in <strong>C++</strong> using <strong>Lex/Yacc</strong> as
                   part of a Systems Programming course. Inspired by the <strong>Bash</strong> strategy, the shell
@@ -440,9 +444,16 @@
             <h3 class="skills__type section-subheading">Languages</h3>
 
             <div class="skill">
-              <h4 class="skill__desc">JS/TS/Node</h4>
+              <h4 class="skill__desc">JS/TS/Node.js</h4>
               <div class="skill__bar-container">
                 <div class="skill__bar" data-level="75%"></div>
+              </div>
+            </div>
+
+            <div class="skill">
+              <h4 class="skill__desc">Java</h4>
+              <div class="skill__bar-container">
+                <div class="skill__bar" data-level="80%"></div>
               </div>
             </div>
 
@@ -461,23 +472,9 @@
             </div>
 
             <div class="skill">
-              <h4 class="skill__desc">Java</h4>
-              <div class="skill__bar-container">
-                <div class="skill__bar" data-level="80%"></div>
-              </div>
-            </div>
-
-            <div class="skill">
-              <h4 class="skill__desc">HTML</h4>
+              <h4 class="skill__desc">HTML/CSS</h4>
               <div class="skill__bar-container">
                 <div class="skill__bar" data-level="85%"></div>
-              </div>
-            </div>
-
-            <div class="skill">
-              <h4 class="skill__desc">CSS</h4>
-              <div class="skill__bar-container">
-                <div class="skill__bar" data-level="70%"></div>
               </div>
             </div>
 
@@ -495,41 +492,41 @@
               </div>
             </div>
 
+            <div class="skill">
+              <h4 class="skill__desc">R</h4>
+              <div class="skill__bar-container">
+                <div class="skill__bar" data-level="35%"></div>
+              </div>
+            </div>
+
             <!-- Frameworks/Technologies -->
             <h3 class="skills__type section-subheading">Frameworks/Libraries</h3>
 
             <div class="skill">
               <h4 class="skill__desc">React</h4>
               <div class="skill__bar-container">
-                <div class="skill__bar" data-level="70%"></div>
+                <div class="skill__bar" data-level="75%"></div>
               </div>
             </div>
 
             <div class="skill">
-              <h4 class="skill__desc">ExpressJS</h4>
+              <h4 class="skill__desc">Express.js</h4>
               <div class="skill__bar-container">
-                <div class="skill__bar" data-level="55%"></div>
-              </div>
-            </div>
-
-            <div class="skill">
-              <h4 class="skill__desc">Jest</h4>
-              <div class="skill__bar-container">
-                <div class="skill__bar" data-level="30%"></div>
+                <div class="skill__bar" data-level="65%"></div>
               </div>
             </div>
 
             <div class="skill">
               <h4 class="skill__desc">Redux</h4>
               <div class="skill__bar-container">
-                <div class="skill__bar" data-level="70%"></div>
+                <div class="skill__bar" data-level="75%"></div>
               </div>
             </div>
 
             <div class="skill">
-              <h4 class="skill__desc">NextJS</h4>
+              <h4 class="skill__desc">Expo</h4>
               <div class="skill__bar-container">
-                <div class="skill__bar" data-level="30%"></div>
+                <div class="skill__bar" data-level="40%"></div>
               </div>
             </div>
 
@@ -541,23 +538,23 @@
             </div>
 
             <div class="skill">
-              <h4 class="skill__desc">ThreeJS</h4>
+              <h4 class="skill__desc">JUnit</h4>
               <div class="skill__bar-container">
                 <div class="skill__bar" data-level="55%"></div>
               </div>
             </div>
 
             <div class="skill">
-              <h4 class="skill__desc">React Native</h4>
+              <h4 class="skill__desc">NumPy/Pandas/Matplotlib</h4>
               <div class="skill__bar-container">
-                <div class="skill__bar" data-level="55%"></div>
+                <div class="skill__bar" data-level="35%"></div>
               </div>
             </div>
 
             <div class="skill">
-              <h4 class="skill__desc">Expo</h4>
+              <h4 class="skill__desc">Three.js</h4>
               <div class="skill__bar-container">
-                <div class="skill__bar" data-level="45%"></div>
+                <div class="skill__bar" data-level="55%"></div>
               </div>
             </div>
 
@@ -572,30 +569,23 @@
             </div>
 
             <div class="skill">
-              <h4 class="skill__desc">Bash</h4>
+              <h4 class="skill__desc">Docker</h4>
               <div class="skill__bar-container">
                 <div class="skill__bar" data-level="55%"></div>
               </div>
             </div>
 
             <div class="skill">
-              <h4 class="skill__desc">Docker</h4>
+              <h4 class="skill__desc">AWS</h4>
               <div class="skill__bar-container">
-                <div class="skill__bar" data-level="40%"></div>
+                <div class="skill__bar" data-level="35%"></div>
               </div>
             </div>
 
             <div class="skill">
-              <h4 class="skill__desc">MongoDB</h4>
+              <h4 class="skill__desc">Linux/Bash</h4>
               <div class="skill__bar-container">
                 <div class="skill__bar" data-level="70%"></div>
-              </div>
-            </div>
-
-            <div class="skill">
-              <h4 class="skill__desc">MySQL</h4>
-              <div class="skill__bar-container">
-                <div class="skill__bar" data-level="75%"></div>
               </div>
             </div>
 

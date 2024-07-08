@@ -12,10 +12,19 @@ import "/styles/utils.css";
 
 import setupHeader from "./header";
 import setupMobileNav from "./mobile-nav";
-import setupHome from "./home/home";
 import setupSkills from "./skills";
 
 setupHeader();
 setupMobileNav();
-setupHome();
 setupSkills();
+
+import("./home/home")
+  .then((setupHome) => {
+    setupHome.default();
+  })
+  .catch(() => {
+    const loading = document.querySelector(".home__animation-loading")! as HTMLElement;
+    const fallback = document.querySelector(".home__fallback")! as HTMLElement;
+    loading.style.display = "none";
+    fallback.style.display = "flex";
+  });
