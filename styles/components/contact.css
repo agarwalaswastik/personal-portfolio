@@ -73,9 +73,9 @@
   display: flex;
   flex-direction: column;
   align-items: start;
-  gap: calc(var(--clamp-2-to-3) / 2);
-  padding: calc(var(--clamp-5-to-12) / 4);
-  font-size: calc(var(--clamp-2-to-3) / 2);
+  gap: var(--clamp-1-to-2);
+  padding: var(--clamp-1-to-2);
+  font-size: clamp(1rem, 0.93rem + 0.33vw, 1.15rem);
   background-color: var(--clr-dark-gray);
   border: 1px solid var(--clr-dark-sky);
   border-radius: 1rem;
@@ -116,7 +116,7 @@
 }
 
 #contact__message {
-  height: calc(var(--clamp-2-to-3) * 4);
+  height: calc(var(--clamp-2-to-3) * 2.5);
   resize: none;
 }
 
